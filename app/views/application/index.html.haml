@@ -1,0 +1,48 @@
+%p This is Haml template!
+%p from Application/index.html.haml
+%h1 Learn HTML5 and jQuery Air:
+
+#wrapper
+  #block
+    %h3#tabs_header SELECT A FLIGHT
+    %section#tabs
+      %ul
+        %li
+          %a{href: "#2012-09-27", data: {flights: "6"}} Sep 27
+        %li
+          %a{href: "#2012-09-28", data: {flights: "5"}} Sep 28
+        %li
+          %a{href: "#2012-09-29", data: {flights: "5"}} Sep 29
+        %li
+          %a{href: "#2012-09-30", data: {flights: "7"}} Sep 30
+        %li
+          %a{href: "#2012-10-01", data: {flights: "4"}} Oct 01
+        %li
+          %a{href: "#2012-10-02", data: {flights: "3"}} Oct 02
+
+    %div.cont#2012-09-27 Loading Sep 27
+    %div.cont#2012-09-28 Loading Sep 28
+    %div.cont#2012-09-29 Loading Sep 29
+    %div.cont#2012-09-30 Loading Sep 30
+    %div.cont#2012-10-01 Loading Oct 1
+    %div.cont#2012-10-02 Loading Oct 2
+    %div#error
+      %h3 Whoops, unable to pull flights.
+      %p
+        Sorry about that,
+        %a{href: '#'} Click Here to try again.
+    %div#loading
+      %h3 Just a minute while we pull up your flight
+
+  %section#confirm
+    %div.flight-review
+      %table
+        %tr
+          %th Base Price:
+          %td#price
+        %tr
+          %th Govt. Taxes:
+          %td#fees
+        %tr.total
+          %th Trip Total:
+          %td.total

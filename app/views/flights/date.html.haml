@@ -1,0 +1,35 @@
+%table#flights
+  %tr
+    %th
+      Depart
+    %th
+      Arrive
+    %th
+      Flight #
+    %th
+      Routing
+    %th
+      First Class
+    %th
+      Coach
+
+  - @flights.each do |flight|
+    %tr{class: cycle('odd', 'even')}
+      %td
+        = flight.depart.strftime("%H:%M")
+      %td
+        = flight.arrive.strftime("%H:%M")
+      %td
+        = flight.flight_num
+      %td
+        = flight.routing
+      %td
+        %a{href: '#'}
+          = '$' + flight.first_class.to_s
+      %td
+        %a{href: '#'}
+          = '$' + flight.coach.to_s
+
+= link_to 'Back to Flights', flights_path
+
+

@@ -1,0 +1,18 @@
+!!! 5
+= link_to 'Home', root_path, class: 'to-root'
+%html
+  %head
+    %title JetRails
+    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Maiden Orange|Rye'
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+
+    = yield
+
+    = link_to 'Back to Flights', flights_path, class: 'to-flights'
+    %div#output
+      Super!
+

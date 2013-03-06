@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  depart: 2013-01-04 17:28:22
+  arrive: 2013-01-04 17:28:22
+  flight_num: 1
+  routing: MyString
+  first_class: 1.5
+  coach: 1.5
+
+two:
+  depart: 2013-01-04 17:28:22
+  arrive: 2013-01-04 17:28:22
+  flight_num: 1
+  routing: MyString
+  first_class: 1.5
+  coach: 1.5

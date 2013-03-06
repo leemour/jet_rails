@@ -1,0 +1,33 @@
+%table#flights
+  %tr
+    %th
+      Depart
+    %th
+      Arrive
+    %th
+      Flight #
+    %th
+      Routing
+    %th
+      First Class
+    %th
+      Coach
+
+  - @flights.each do |flight|
+    %tr{class: cycle('odd', 'even')}
+      %td
+        = flight.depart.strftime("%H:%M")
+      %td
+        = flight.arrive.strftime("%H:%M")
+      %td
+        = flight.flight_num
+      %td
+        = flight.routing
+      %td
+        %a{href: '#', data: {class: 'first-class', flight: flight.flight_num}}
+          = '$' + flight.first_class.to_s
+      %td
+        %a{href: '#', data: {class: 'first-class', flight: flight.flight_num}}
+          = '$' + flight.coach.to_s
+
+
